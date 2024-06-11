@@ -14,7 +14,7 @@ class AlienInvasion:
         """começar o loop principal do jogo"""
         while True:
             # eventos do teclado e rato
-            for event in pygame.even.get():
+            for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
             # mostrar ecrã
