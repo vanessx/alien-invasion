@@ -16,12 +16,14 @@ class AlienInvasion:
         self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption('Alien Invansion')
         self.ship = Ship(self)
+        self.bullets = pygame.sprite.Group()
     
     def run_game(self):
         """começar o loop principal do jogo"""
         while True:
             self._check_events()
             self.ship.update()
+            self.bullets.update()
             self._update_screen()
 
             # mostrar ecrã
